@@ -17,8 +17,7 @@ const POSTER_TITLE_CLASS_NAME = 'poster-title-color';
 
 const MyTMDBList = ({
   theme,
-  myList,
-  baseUrl
+  myList
 }) => (
   <>
     <LazyLoad
@@ -36,7 +35,7 @@ const MyTMDBList = ({
         <Scenery
           width={W500H282.WIDTH}
           height={W500H282.HEIGHT}
-          src={`${baseUrl}w${W500H282.WIDTH}${myList.backdrop_path}`} />
+          src={myList.backdrop_path} />
         <DetailsPanelWrapper theme={theme}>
           <PosterTitle
             theme={theme}

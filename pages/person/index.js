@@ -77,8 +77,6 @@ const Person = () => {
     return <Loader />;
   }
 
-  const { secure_base_url: baseUrl } = general.base.images;
-
   const sortByOptionValueOnChangeHandler = newSortByOptionValue => {
     setSortByOptionValue(newSortByOptionValue);
   };
@@ -88,11 +86,8 @@ const Person = () => {
       <Head>
         <title>{`${person.name} - Person Library`}</title>
       </Head>
-      <PersonSummary
-        baseUrl={baseUrl}
-        person={person} />
+      <PersonSummary person={person} />
       <PersonMovieList
-        baseUrl={baseUrl}
         personMovies={personMovies}
         sortByOptionValue={sortByOptionValue}
         sortByOptionValueOnChange={sortByOptionValueOnChangeHandler} />

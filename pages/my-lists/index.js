@@ -89,9 +89,7 @@ const MyLists = ({
             <Header
               title='My Lists'
               subtitle='TMDB' />
-            <MyTMDBLists
-              myLists={myLists}
-              baseUrl={TMDB_IMAGE_BASE_URL} />
+            <MyTMDBLists myLists={myLists}/>
           </PaddingWrapper>
         </PageWrapper>
       </>

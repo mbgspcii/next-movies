@@ -20,7 +20,6 @@ const GRAY_FILTERED_CLASS_NAME = 'gray-filtered';
 const ChooseImageItem = ({
   theme,
   movie,
-  baseUrl,
   text,
   textAlwaysVisible,
   ...rest
@@ -36,9 +35,7 @@ const ChooseImageItem = ({
           overlayClass={GRAY_FILTERED_CLASS_NAME}
           width={W355_AND_H200_BESTV2.WIDTH}
           height={W355_AND_H200_BESTV2.HEIGHT}
-          // TODO: placeholder is broken with it
-          // srcSet={`${baseUrl}/${W355_AND_H200_BESTV2.FULL}${movie.backdrop_path} 1x, ${baseUrl}/${W710_AND_H400_BESTV2.FULL}${movie.backdrop_path} 2x`} 
-          src={`${baseUrl}${W355_AND_H200_BESTV2.FULL}${movie.backdrop_path}`} />
+          src={movie.backdrop_path} />
         <h2>{text}</h2>
       </button>
       <PosterTitle

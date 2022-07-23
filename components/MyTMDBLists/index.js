@@ -6,8 +6,7 @@ import withTheme from 'utils/hocs/withTheme';
 
 const MyTMDBLists = ({
   theme,
-  myLists,
-  baseUrl
+  myLists
 }) => (
   <>
     <BackdropsGridContainer theme={theme}>
@@ -16,7 +15,7 @@ const MyTMDBLists = ({
           theme={theme}
           key={myList.id}
           myList={myList}
-          baseUrl={baseUrl} />
+        />
       ))}
     </BackdropsGridContainer>
     <Pagination

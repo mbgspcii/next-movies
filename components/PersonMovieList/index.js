@@ -11,7 +11,6 @@ import SortBy from 'components/SortBy';
 import { SCROLL_TO_ELEMENT } from 'utils/constants';
 
 const PersonMovieList = ({
-  baseUrl,
   personMovies,
   sortByOptionValue,
   sortByOptionValueOnChange
@@ -35,9 +34,7 @@ const PersonMovieList = ({
           <SortBy
             value={sortByOptionValue}
             onChange={sortByOptionValueOnChange} />
-          <MovieList
-            baseUrl={baseUrl}
-            movies={personMovies} />
+          <MovieList movies={personMovies} />
         </>
       )
     )}

@@ -7,8 +7,7 @@ import withTheme from 'utils/hocs/withTheme';
 
 const MovieList = ({
   theme,
-  movies,
-  baseUrl
+  movies
 }) => (
   <>
     <MoviesGridContainer theme={theme}>
@@ -17,7 +16,7 @@ const MovieList = ({
           theme={theme}
           key={movie.id}
           movie={movie}
-          baseUrl={baseUrl} />
+        />
       ))}
     </MoviesGridContainer>
     <Pagination

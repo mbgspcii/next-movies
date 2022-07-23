@@ -174,7 +174,7 @@ const ChooseImage = ({
                           textAlwaysVisible={textAlwaysVisible}
                           disabled={disabled}
                           onClick={chooseImageHandler(movie.backdrop_path)}
-                          baseUrl={TMDB_IMAGE_BASE_URL} />
+                          />
                       );
                     })}
                   </BackdropsGridContainer>

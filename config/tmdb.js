@@ -9,7 +9,7 @@ const TMDB_API_BASE_URL = 'https://api.themoviedb.org';
 const TMDB_BASE_URL = 'https://www.themoviedb.org';
 
 // TODO: should fetch from TMDB configuration endpoint
-const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
+const TMDB_IMAGE_BASE_URL = '';
 
 const TMDB_PAGE_LIMIT = 20;
 

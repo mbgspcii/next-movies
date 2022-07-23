@@ -75,8 +75,6 @@ const Genre = () => {
     return <Loader />;
   }
 
-  const { secure_base_url: baseUrl } = general.base.images;
-
   const sortByOptionValueOnChangeHandler = newSortByOptionValue => {
     setSortByOptionValue(newSortByOptionValue);
   };
@@ -93,9 +91,7 @@ const Genre = () => {
         <SortBy
           value={sortByOptionValue}
           onChange={sortByOptionValueOnChangeHandler} />
-        <MovieList
-          movies={movies}
-          baseUrl={baseUrl} />
+        <MovieList movies={movies}/>
       </PaddingWrapper>
     </PageWrapper>
   );

@@ -9,8 +9,7 @@ import Loader from 'components/UI/Loader';
 import { SCROLL_TO_ELEMENT } from 'utils/constants';
 
 const RecommendedMovieList = ({
-  recommendedMovies,
-  baseUrl
+  recommendedMovies
 }) => (
   <PaddingWrapper>
     <Element name={SCROLL_TO_ELEMENT}>
@@ -26,9 +25,7 @@ const RecommendedMovieList = ({
           title='Sorry!'
           subtitle='There are no recommended movies...' />
       ) : (
-        <MovieList
-          movies={recommendedMovies}
-          baseUrl={baseUrl} />
+        <MovieList movies={recommendedMovies}/>
       )
     )}
   </PaddingWrapper>

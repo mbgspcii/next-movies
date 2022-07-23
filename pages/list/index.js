@@ -100,9 +100,7 @@ const List = () => {
                 title='Sorry!'
                 subtitle='There were no items...' />
             ) : (
-              <MovieList
-                movies={movies}
-                baseUrl={TMDB_IMAGE_BASE_URL} />
+              <MovieList movies={movies}/>
             )}
           </PaddingWrapper>
         </PageWrapper>

@@ -95,8 +95,6 @@ const Home = () => {
     })();
   }, [categoryName, page, dispatch]);
 
-  const { secure_base_url: baseUrl } = general.base.images;
-
   return (
     <>
       <Head>
@@ -117,9 +115,7 @@ const Home = () => {
             <Header
               title={general.selectedMenuItemName}
               subtitle='movies' />
-            <MovieList
-              movies={movies}
-              baseUrl={baseUrl} />
+            <MovieList movies={movies}/>
           </PaddingWrapper>
         </PageWrapper>
       )}

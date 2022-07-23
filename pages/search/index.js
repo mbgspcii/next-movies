@@ -74,8 +74,6 @@ const Search = () => {
         subtitle={`There were no results for ${searchTerm}...`} />
     );
   } else {
-    const { secure_base_url: baseUrl } = general.base.images;
-
     return (
       <PageWrapper>
         <PaddingWrapper>
@@ -85,9 +83,7 @@ const Search = () => {
           <Header
             title={searchTerm}
             subtitle='search results' />
-          <MovieList
-            movies={movies}
-            baseUrl={baseUrl} />
+          <MovieList movies={movies}/>
         </PaddingWrapper>
       </PageWrapper>
     );

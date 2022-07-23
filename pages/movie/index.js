@@ -70,11 +70,7 @@ const Movie = () => {
 
   if (movie.loading) {
     return <Loader />;
-  }
-
-  console.log("wwwwwwwwwwwww", movie);
-
-  const { secure_base_url: baseUrl } = general.base.images;
+  } 
 
   return (
     <PageWrapper>
@@ -82,11 +78,8 @@ const Movie = () => {
         <title>{`${movie.title} - Movie Library`}</title>
       </Head>
       <MovieSummary
-        baseUrl={baseUrl}
         movie={movie} />
-      <RecommendedMovieList
-        baseUrl={baseUrl}
-        recommendedMovies={recommendedMovies} />
+      <RecommendedMovieList recommendedMovies={recommendedMovies} />
     </PageWrapper>
   );
 };

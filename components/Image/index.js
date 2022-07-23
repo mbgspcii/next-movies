@@ -6,11 +6,11 @@ import GradientImageWrapper from 'parts/GradientImageWrapper';
 import { TwicImg } from '@twicpics/components/react';
 
 const Image = ({
+  alt,
   aspectRatio,
   className,
   gradientOverlayEnabled,
   overlayClass,
-  alt,
   ...rest
 }) => {
   const [error, setError] = useState(false);

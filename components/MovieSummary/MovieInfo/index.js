@@ -12,7 +12,6 @@ import withTheme from 'utils/hocs/withTheme';
 
 const MovieInfo = ({
   theme,
-  baseUrl,
   movie
 }) => (
   <>
@@ -36,7 +35,7 @@ const MovieInfo = ({
       <TheCastSection
         className='cast-section-bottom-margin'
         cast={movie.cast}
-        baseUrl={baseUrl} />
+      />
       <MovieAdSection
         websiteUrl={movie.homepage}
         imdbId={movie.imdb_id}

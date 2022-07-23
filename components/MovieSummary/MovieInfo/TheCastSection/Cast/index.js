@@ -8,8 +8,7 @@ import PersonLink from './PersonLink';
 const GLIDER_ITEM_WIDTH = 70;
 
 const Cast = ({
-  cast,
-  baseUrl
+  cast
 }) => {
   const [slidesToShow, setSlidesToShow] = useState(null);
   const ref = useRef(null);
@@ -43,7 +42,7 @@ const Cast = ({
             <PersonLink
               key={person.credit_id}
               person={person}
-              baseUrl={baseUrl} />
+            />
           ))}
         </Glider>
       </div>
