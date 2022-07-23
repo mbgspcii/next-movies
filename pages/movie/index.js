@@ -72,6 +72,8 @@ const Movie = () => {
     return <Loader />;
   }
 
+  console.log("wwwwwwwwwwwww", movie);
+
   const { secure_base_url: baseUrl } = general.base.images;
 
   return (

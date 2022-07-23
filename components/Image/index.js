@@ -3,35 +3,29 @@ import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 
 import GradientImageWrapper from 'parts/GradientImageWrapper';
+import { TwicImg } from '@twicpics/components/react';
 
 const Image = ({
-  style,
+  aspectRatio,
   className,
-  loadingUI,
-  placeholderPath,
   gradientOverlayEnabled,
   overlayClass,
   alt,
   ...rest
 }) => {
-  const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
-  useEffect(() => {
-    return () => setLoaded(false);
-  }, []);
+  
 
-  const onImageLoadHandler = () => {
-    setLoaded(true);
-  };
+  
 
   return (
     <>
       {/* TODO: it heavily depends on JS -> would be better to go with HTML and CSS */}
-      {!loaded && loadingUI}
       <GradientImageWrapper
         className={overlayClass}
         overlayEnabled={gradientOverlayEnabled}>
-        <img
+            <TwicImg alt={alt} className={clsx('img', className)} ratio={1/aspectRatio || 1}  {...rest}/>
+        {/*<img
           className={clsx('img', className)}
           onLoad={onImageLoadHandler}
           onError={event => {
@@ -45,7 +39,7 @@ const Image = ({
             display: loaded ? 'block' : 'none'
           }}
           alt={alt ?? ''}
-          {...rest} />
+        {...rest} />*/}
       </GradientImageWrapper>
       <style jsx>{`
         .img {
