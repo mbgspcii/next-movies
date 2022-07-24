@@ -1,7 +1,4 @@
 
-
-import LazyLoad from 'react-lazyload';
-
 import PosterLink from 'components/PosterLink';
 import Scenery from 'components/Scenery';
 import DetailsPanelWrapper from 'components/DetailsPanelWrapper';
@@ -20,9 +17,6 @@ const MyTMDBList = ({
   myList
 }) => (
   <>
-    <LazyLoad
-      height={200}
-      offset={200}>
       <PosterLink
         className={POSTER_LINK_CLASS_NAME}
         href={{
@@ -57,7 +51,6 @@ const MyTMDBList = ({
           </PosterTitle>
         </DetailsPanelWrapper>
       </PosterLink>
-    </LazyLoad>
     {/* TODO: styling duplication */}
     <style jsx>{`
       :global(.${POSTER_LINK_CLASS_NAME}:hover .${CLASS_NAMES.IMAGE_LOADING_PLACEHOLDER}) {

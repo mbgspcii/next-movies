@@ -28,6 +28,7 @@ Clone and install the dependencies for `next-movies` locally:
 1. Take a copy of .env.local.example and re-name to .env.local
 2. Get your TMDb API key
 3. Get your TMDB API read access token
+4. Configure a TwicPics domain with a path pointing to https://image.tmdb.org/t/p/original/
 4. Enter the details into the .env.local file
     
 ## Running locally
@@ -48,7 +49,6 @@ Built with:
 * Next.js
 * Redux and Redux Thunk
 * react-glider
-* react-lazyload
 * react-modal-video
 * react-scroll
 * react-select-search
