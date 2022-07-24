@@ -13,7 +13,7 @@ const Profile = ({ src, alt }) => (
       aspectRatio={PROFILE_WIDTH/PROFILE_HEIGHT}
       src={src}
       alt={alt}
-      focus = "50px0p"
+      focus = "50px5p"
       className="center-profile profile-border-radius"
       placeholderPath={PROFILE_PLACEHOLDER_IMAGE_PATH}
     />

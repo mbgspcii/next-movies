@@ -24,7 +24,7 @@ const Image = ({
                 alt={alt}
                 className={clsx('img', className)}
                 ratio= {`${aspectRatio}`}
-                src = {src || placeholderPath}
+                src = {(src && src != `null`) ? src : placeholderPath}
                 mode={src ? `cover` : `contain`}
                 {...rest}/>
       </GradientImageWrapper>
